@@ -1,0 +1,1 @@
+web: gunicorn studypeer.wsgi --log-file -

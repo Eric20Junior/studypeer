@@ -25,7 +25,7 @@ SECRET_KEY = 'k=zc*9%z1j++d^^h=!m#k^bn6)mc^w947d&@z%*$is(afb%1qs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -127,6 +127,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ['static']
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+    ]
 
 CORS_ALLOW_ALL_ORIGINS = True
